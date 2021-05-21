@@ -1,0 +1,96 @@
+<html>
+<head>
+	<title>New Product</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+	<div class="header">
+		<center><h1>Born Creative Soap</h1><center>
+		<center><p>~Feel free like a sea~</p><center>
+		<br>
+		<a href=index.php><i>Back</i></a>
+		</div>
+
+	
+
+	<div class="main">
+		<div class="container">
+			<div>
+				<form action="newproduct.php" enctype="multipart/form-data" method="post"
+				onsubmit="return confirm('Are you sure you want insert new product?');">
+				<label>Choose Image: </label><br>
+				<input type="file" name="image"><br><br>
+
+			<form name="newProductForm" action="../PHP/newproduct.php" onsubmit="return validateRegForm()" method="post">
+
+				<div class="row">
+					<div class="col-25">
+						<label for="prname">Product Name</label>
+					</div>
+					<div class="col-75">
+						<input type="text" id="idprname" name="prname" placeholder="Insert the product name..">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-25">
+						<label for="prprice">Product Price</label>
+					</div>
+					<div class="col-75">
+						<input type="text" id="idprprice" name="prprice" placeholder="Insert the product price without RM">
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-25">
+						<label for="prtype">Product Type</label>
+					</div>
+
+					<div class="col-75">
+						<select name="prtype" id="idprtype">
+							<option value="noselection">Please select the product type</option>
+							<option value="Fragrance">Fragrance</option>
+							<option value="Non Fragrance">Non Fragrance</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-25">
+						<label for="prqty">Product Quantity</label>
+					</div>
+					<div class="col-75">
+						<input type="number" id="idprqty" name="prqty" min="1" max="50">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-25">
+						<label for="date">Date Created</label>
+					</div>
+					<div class="col-75">
+							<input type="date" id="datecreated" name="datecreated">
+					</div>
+
+				<div><input type="submit" value="Submit"></div>
+				</div>
+
+			</form>
+
+		</div>
+
+	</div>
+</body>
+
+</html>
+
+<style>h1 {color: Purple;}
+    p {color: Purple;}
+</style>
+
+<style>
+.header {
+  overflow: hidden;
+  background-color: Pink;
+  padding: 20px 10px;}
+</style>
